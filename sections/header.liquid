@@ -1,0 +1,119 @@
+{% stylesheet %}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 14px 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #111;
+    white-space: nowrap;
+  }
+
+  .tagline {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .choose-gift-btn {
+    background-color: #f5e02a;
+    color: #111;
+    border: none;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+  }
+
+  .choose-gift-btn:hover {
+    background-color: #e6d020;
+  }
+
+  .choose-gift-btn .arrow {
+    font-size: 16px;
+    transition: transform 0.2s ease;
+  }
+
+  .choose-gift-btn:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  /* Tablet */
+  @media (max-width: 768px) {
+    .top-header {
+      justify-content: center;
+      text-align: center;
+      padding: 12px 20px;
+    }
+
+    .tagline {
+      order: 3;
+      width: 100%;
+      margin-top: 6px;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 480px) {
+    .top-header {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 16px;
+    }
+
+    .logo {
+      font-size: 18px;
+    }
+
+    .tagline {
+      font-size: 13px;
+      order: 2;
+    }
+
+    .choose-gift-btn {
+      order: 3;
+      padding: 9px 18px;
+      font-size: 13px;
+    }
+  }
+{% endstylesheet %}
+
+<header class="top-header full-width">
+  <div class="logo">TISSO VISON</div>
+  <div class="tagline">Find the ideal gift for your loved ones.</div>
+  <button class="choose-gift-btn">
+    CHOOSE GIFT <span class="arrow">&#8594;</span>
+  </button>
+</header>
+
+{% schema %}
+{
+  "name": "Header"
+}
+{% endschema %}

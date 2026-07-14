@@ -1,0 +1,219 @@
+<section class="image-with-text">
+  <div class="container">
+    <div class="image-with-text__wrapper">
+      <!-- Image -->
+      <div class="image-with-text__image">
+        <img src="{{ '6.png' | asset_url }}" alt="Image With Text">
+      </div>
+      <!-- Content -->
+      <div class="image-with-text__content">
+        <span class="image-with-text__subtitle">
+          PREMIUM COLLECTION
+        </span>
+        <h2 class="image-with-text__title">
+          Designed For Your Everyday Lifestyle
+        </h2>
+        <p class="image-with-text__description">
+          Discover timeless essentials crafted with premium materials, modern comfort,
+          and effortless style. Perfect for every occasion and every season.
+        </p>
+        <ul class="image-with-text__features">
+          <li>
+            ✔ Premium Quality Materials
+          </li>
+          <li>
+            ✔ Free Shipping Worldwide
+          </li>
+          <li>
+            ✔ 30 Days Easy Returns
+          </li>
+        </ul>
+        <a href="#" class="image-with-text__button">
+          Shop Collection
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.image-with-text-section{
+    background: #eceaea;
+}
+.image-with-text {
+  padding:50px 0;
+}
+.image-with-text__wrapper {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:80px;
+}
+.image-with-text__image {
+  overflow:hidden;
+  border-radius:10px;
+}
+.image-with-text__image img {
+  width:100%;
+  height:650px;
+  display:block;
+  object-fit:cover;
+}
+
+.image-with-text__subtitle {
+  display:inline-block;
+  margin-bottom:14px;
+  font-size:13px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#777;
+  font-weight:600;
+}
+.image-with-text__title {
+  font-size:48px;
+  line-height:1.15;
+  margin-bottom:24px;
+  color:#111;
+}
+.image-with-text__description {
+  font-size:18px;
+  line-height:1.8;
+  color:#666;
+  margin-bottom:35px;
+}
+.image-with-text__features {
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  margin-bottom:40px;
+}
+.image-with-text__features li {
+  font-size:17px;
+  color:#222;
+}
+.image-with-text__button {
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:200px;
+  height:58px;
+  border-radius:10px;
+  background:#111;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition:.35s ease;
+}
+.image-with-text__button:hover {
+  background:#333;
+}
+
+/* --------------------------
+   Hover Animation
+--------------------------- */
+
+.image-with-text__button:hover {
+  transform:translateY(-2px);
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+/* --------------------------
+   Tablet
+--------------------------- */
+
+@media screen and (max-width:991px) {
+  .image-with-text {
+  padding:90px 0;
+}
+.image-with-text__wrapper {
+  grid-template-columns:1fr;
+  gap:50px;
+}
+.image-with-text__image {
+  order:1;
+}
+.image-with-text__content {
+  order:2;
+}
+.image-with-text__image img {
+  height:550px;
+}
+.image-with-text__title {
+  font-size:40px;
+}
+.image-with-text__description {
+  font-size:16px;
+}
+}/* --------------------------
+   Mobile
+--------------------------- */
+
+@media screen and (max-width:767px) {
+  .image-with-text {
+  padding:70px 0;
+}
+.image-with-text__wrapper {
+  gap:40px;
+}
+.image-with-text__image {
+  border-radius:16px;
+}
+.image-with-text__image img {
+  height:380px;
+}
+.image-with-text__subtitle {
+  font-size:12px;
+  letter-spacing:2px;
+}
+.image-with-text__title {
+  font-size:32px;
+  margin-bottom:18px;
+}
+.image-with-text__description {
+  font-size:15px;
+  line-height:1.7;
+  margin-bottom:28px;
+}
+.image-with-text__features {
+  gap:14px;
+  margin-bottom:30px;
+}
+.image-with-text__features li {
+  font-size:15px;
+}
+.image-with-text__button {
+  width:100%;
+  height:54px;
+}
+}/* --------------------------
+   Small Mobile
+--------------------------- */
+
+@media screen and (max-width:480px) {
+  .image-with-text__title {
+  font-size:28px;
+}
+.image-with-text__description {
+  font-size:14px;
+}
+.image-with-text__image img {
+  height:300px;
+}
+}
+
+ {% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Image With Text",
+  "tag": "section",
+  "class": "image-with-text-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Image With Text"
+    }
+  ]
+}
+{% endschema %}

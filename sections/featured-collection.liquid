@@ -1,0 +1,325 @@
+<section class="featured-collection">
+    <div class="container">
+        <div class="featured-collection__header">
+            <div class="featured-collection__heading">
+                <span class="featured-collection__subtitle">
+                    Best Collection
+                </span>
+                <h2 class="featured-collection__title">
+                    Featured Products
+                </h2>
+                <p class="featured-collection__description">
+                    Discover our most popular products carefully selected for you.
+                </p>
+            </div>
+            <a href="#" class="featured-collection__link">
+                View All
+            </a>
+        </div>
+        <div class="featured-collection__grid">
+
+            <!-- Product Card -->
+
+            <article class="product-card">
+                <div class="product-card__image">
+                    <img src="{{ '5.png' | asset_url }}">
+                    <span class="product-card__badge">
+                        Sale
+                    </span>
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">
+                        Premium Hoodie
+                    </h3>
+                    <div class="product-card__rating">
+                        ★★★★★
+                    </div>
+                    <div class="product-card__price">
+                        <span class="product-card__price--new">
+                            ₹1,999
+                        </span>
+                        <span class="product-card__price--old">
+                            ₹2,499
+                        </span>
+                    </div>
+                    <button class="product-card__button">
+                        Add To Cart
+                    </button>
+                </div>
+            </article>
+
+             <article class="product-card">
+                <div class="product-card__image">
+                    <img src="{{ '5.png' | asset_url }}">
+                    <span class="product-card__badge">
+                        Sale
+                    </span>
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">
+                        Premium Hoodie
+                    </h3>
+                    <div class="product-card__rating">
+                        ★★★★★
+                    </div>
+                    <div class="product-card__price">
+                        <span class="product-card__price--new">
+                            ₹1,999
+                        </span>
+                        <span class="product-card__price--old">
+                            ₹2,499
+                        </span>
+                    </div>
+                    <button class="product-card__button">
+                        Add To Cart
+                    </button>
+                </div>
+            </article>
+
+             <article class="product-card">
+                <div class="product-card__image">
+                    <img src="{{ '5.png' | asset_url }}">
+                    <span class="product-card__badge">
+                        Sale
+                    </span>
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">
+                        Premium Hoodie
+                    </h3>
+                    <div class="product-card__rating">
+                        ★★★★★
+                    </div>
+                    <div class="product-card__price">
+                        <span class="product-card__price--new">
+                            ₹1,999
+                        </span>
+                        <span class="product-card__price--old">
+                            ₹2,499
+                        </span>
+                    </div>
+                    <button class="product-card__button">
+                        Add To Cart
+                    </button>
+                </div>
+            </article>
+
+             <article class="product-card">
+                <div class="product-card__image">
+                    <img src="{{ '5.png' | asset_url }}">
+                    <span class="product-card__badge">
+                        Sale
+                    </span>
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">
+                        Premium Hoodie
+                    </h3>
+                    <div class="product-card__rating">
+                        ★★★★★
+                    </div>
+                    <div class="product-card__price">
+                        <span class="product-card__price--new">
+                            ₹1,999
+                        </span>
+                        <span class="product-card__price--old">
+                            ₹2,499
+                        </span>
+                    </div>
+                    <button class="product-card__button">
+                        Add To Cart
+                    </button>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+{% stylesheet %}
+.featured-collection{
+    padding:50px 0 ;
+}
+
+.featured-collection__header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:60px;
+}
+
+.featured-collection__heading{
+    max-width:600px;
+}
+
+.featured-collection__subtitle{
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:600;
+    text-transform:uppercase;
+    color:#777;
+}
+
+.featured-collection__title{
+    margin-top:12px;
+    margin-bottom:16px;
+    line-height:1.1;
+    font-size:40px;
+}
+
+.featured-collection__link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-weight:600;
+    transition:.3s;
+    color:#111;
+    text-decoration:none;
+}
+.featured-collection__link:hover{
+    gap:14px;
+}
+
+.featured-collection__grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.product-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid #ececec;
+    transition:.35s;
+    display:flex;
+    flex-direction:column;
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+
+.product-card__image{
+    position:relative;
+    aspect-ratio:1/1;
+    overflow:hidden;
+    background:#f7f7f7;
+    border-bottom:1px solid #f1f1f1;
+}
+
+.product-card__image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.product-card:hover img{
+    transform:scale(1.08);
+}
+
+.product-card__badge{
+    position:absolute;
+    top:16px;
+    left:16px;
+    padding:6px 12px;
+    background:#111;
+    color:#fff;
+    font-size:12px;
+    border-radius:50px;
+}
+
+.product-card__content{
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+    padding:28px;
+}
+
+.product-card__title{
+    margin-bottom:14px;
+    font-size:26px;
+    line-height:1.3;
+}
+
+.product-card__rating{
+    margin-bottom:16px;
+    color:#ffb400;
+    letter-spacing:2px;
+    font-size:20px;
+}
+
+.product-card__price{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.product-card__price--new{
+    font-size:20px;
+    font-weight:700;
+}
+
+.product-card__price--old{
+    text-decoration:line-through;
+    opacity:.5;
+    color:#888;
+}
+
+.product-card__button{
+   width:100%;
+    height:52px;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+.product-card__button:hover{
+    background:#111;
+    color:#fff;
+}
+
+@media(max-width:991px){
+
+.featured-collection__grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.featured-collection__header{
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
+}
+
+}
+
+@media(max-width:576px){
+
+.featured-collection__title{
+font-size:32px;
+}
+
+.featured-collection__grid{
+grid-template-columns:1fr;
+}
+
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "tag": "section",
+  "class": "featured-collection-section",
+  "settings": [
+    // HINT: Yahan aapko settings ke objects daalne hain (image_picker, text, select, range etc.)
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection"
+    }
+  ]
+}
+{% endschema %}  

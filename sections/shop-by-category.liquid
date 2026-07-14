@@ -1,0 +1,248 @@
+<section class="shop-category">
+  <div class="container">
+    <div class="shop-category__header">
+      <span class="shop-category__subtitle">
+        SHOP BY CATEGORY
+      </span>
+      <h2 class="shop-category__title">
+        Find Your Style
+      </h2>
+      <p class="shop-category__description">
+        Explore our carefully selected collections crafted for every lifestyle
+        and occasion.
+      </p>
+    </div>
+    <div class="shop-category__grid">
+      <!-- Card 1 -->
+      <a href="#" class="category-card">
+        <div class="category-card__image">
+          <img src="{{ '1.png' | asset_url }}" alt="Men Collection">
+          <div class="category-card__overlay">
+          </div>
+        </div>
+        <div class="category-card__content">
+          <h3 class="category-card__title">
+            Men
+          </h3>
+        </div>
+      </a>
+      <!-- Card 2 -->
+      <a href="#" class="category-card">
+        <div class="category-card__image">
+          <img src="{{ '2.png' | asset_url }}" alt="Women Collection">
+          <div class="category-card__overlay">
+          </div>
+        </div>
+        <div class="category-card__content">
+          <h3 class="category-card__title">
+            Women
+          </h3>
+        </div>
+      </a>
+      <!-- Card 3 -->
+      <a href="#" class="category-card">
+        <div class="category-card__image">
+          <img src="{{ '3.png' | asset_url }}" alt="Accessories">
+          <div class="category-card__overlay">
+          </div>
+        </div>
+        <div class="category-card__content">
+          <h3 class="category-card__title">
+            Accessories
+          </h3>
+        </div>
+      </a>
+      <!-- Card 4 -->
+      <a href="#" class="category-card">
+        <div class="category-card__image">
+          <img src="{{ '4.png' | asset_url }}" alt="Shoes">
+          <div class="category-card__overlay">
+          </div>
+        </div>
+        <div class="category-card__content">
+          <h3 class="category-card__title">
+            Shoes
+          </h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.shop-category {
+  padding:50px 0;
+}
+.shop-category__header {
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 70px;
+}
+.shop-category__subtitle {
+  display:inline-block;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#777;
+  margin-bottom:12px;
+}
+.shop-category__title {
+  font-size:40px;
+  line-height:1.1;
+  margin-bottom:18px;
+}
+.shop-category__description {
+  font-size:18px;
+  color:#666;
+  line-height:1.7;
+}
+.shop-category__grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:32px;
+}
+.category-card {
+  display:block;
+  text-decoration:none;
+  overflow:hidden;
+  border-radius:18px;
+  position:relative;
+  transition:.35s ease;
+}
+.category-card__image {
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+}
+.category-card__image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s ease;
+  display:block;
+}
+.category-card__overlay {
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.15);
+  transition:.35s ease;
+}
+.category-card__content {
+  width:100%;
+  padding:13px;
+  text-align: center;
+}
+.category-card__title {
+  color:#000;
+  font-size:20px;
+  font-weight:600;
+}
+.category-card:hover img {
+  transform:scale(1.08);
+}
+.category-card:hover .category-card__overlay {
+  background:rgba(0,0,0,.35);
+}
+.category-card:hover {
+  transform:translateY(-8px);
+}
+
+/* ---------- Card Shadow ---------- */
+
+.category-card {
+  box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+.category-card:hover {
+  box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+/* ---------- Smooth Title ---------- */
+
+.category-card__title {
+  transition:.35s ease;
+}
+.category-card:hover .category-card__title {
+  transform:translateY(-6px);
+}
+/* ---------- Cursor ---------- */
+
+.category-card {
+  cursor:pointer;
+}
+/* ---------- Tablet ---------- */
+
+@media screen and (max-width:991px) {
+.shop-category__grid {
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+.shop-category__title {
+  font-size:40px;
+}
+.shop-category__description {
+  font-size:16px;
+}
+.category-card__title {
+  font-size:26px;
+}
+}/* ---------- Mobile ---------- */
+
+@media screen and (max-width:767px) {
+
+.shop-category__header {
+  margin-bottom:45px;
+}
+.shop-category__title {
+  font-size:32px;
+}
+.shop-category__description {
+  font-size:15px;
+}
+.shop-category__grid {
+  grid-template-columns:1fr;
+  gap:20px;
+}
+.category-card {
+  border-radius:14px;
+}
+.category-card__content {
+  padding:22px;
+}
+.category-card__title {
+  font-size:24px;
+}
+}/* ---------- Small Mobile ---------- */
+
+@media screen and (max-width:480px) {
+  .shop-category__subtitle {
+  letter-spacing:2px;
+  font-size:12px;
+}
+.shop-category__title {
+  font-size:28px;
+}
+.shop-category__description {
+  font-size:14px;
+  line-height:1.6;
+}
+.category-card__title {
+  font-size:22px;
+}
+}
+
+ {% endstylesheet %}
+
+
+{% schema %}
+{
+  "name": "Shop By Category",
+  "tag": "section",
+  "class": "shop-category-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Shop By Category"
+    }
+  ]
+}
+{% endschema %}

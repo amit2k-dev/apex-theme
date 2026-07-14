@@ -1,0 +1,122 @@
+<div class="custom-hero section-{{ section.id }} full-width">
+  
+  <div class="hero-image-wrapper">
+    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1600" alt="Desktop Banner" class="hero-img desktop-only">
+    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=600" alt="Mobile Banner" class="hero-img mobile-only">
+    
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-container container-align-center">
+    <div class="hero-content">
+      <h1 class="hero-title size-large">Elevate Your Style</h1>
+      <div class="hero-subheading">
+        <p>Discover the new summer collection with premium fabrics and modern cuts designed for comfort.</p>
+      </div>
+      <a href="#" class="hero-btn btn-primary">Shop Now</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .custom-hero {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .mobile-only { display: none; }
+  .desktop-only { display: block; }
+
+  /* Overlay Color: Black with 40% Opacity by default */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 2;
+  }
+  .hero-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+  }
+  
+  /* Text Alignment Classes */
+  .container-align-left { justify-content: flex-start; text-align: left; }
+  .container-align-center { justify-content: center; text-align: center; }
+  .container-align-right { justify-content: flex-end; text-align: right; }
+
+  .hero-content {
+    max-width: 600px;
+    color: #ffffff;
+  }
+  
+  /* Heading Sizes */
+  .hero-title { margin: 0 0 15px 0; font-weight: 700; line-height: 1.2; }
+  .size-small { font-size: 28px; }
+  .size-medium { font-size: 42px; }
+  .size-large { font-size: 56px; }
+
+  .hero-subheading { font-size: 18px; margin-bottom: 30px; line-height: 1.5; }
+  .hero-subheading p { margin: 0; }
+
+  /* Buttons styling */
+  .hero-btn {
+    display: inline-block;
+    padding: 12px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  .btn-primary { background-color: #ffffff; color: #000000; }
+  .btn-secondary { background-color: transparent; color: #ffffff; border: 2px solid #ffffff; }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .custom-hero { min-height: 50vh; }
+    .mobile-only { display: block; }
+    .desktop-only { display: none; }
+    .size-large { font-size: 36px; }
+    .size-medium { font-size: 30px; }
+    .size-small { font-size: 24px; }
+    .hero-container { justify-content: center !important; text-align: center !important; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    // HINT: Yahan aapko settings ke objects daalne hain (image_picker, text, select, range etc.)
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}   

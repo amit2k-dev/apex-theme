@@ -1,0 +1,70 @@
+<div class="full-width announcement-bar" style="background-color:{{ section.settings.background_color}}; display: {% if section.settings.show_announcement == true %}block{% else %}none{% endif %};">
+        <div class="announcement_bar_text">
+                <p class="announcement_text" style="color:{{ section.settings.text_color}}; font-size:{{ section.settings.font_size}}px;">
+                    <a href="{{section.settings.announcement_link}}" target="_blank">{{section.settings.announcement_text}} </a>
+                </p>
+        </div>
+</div>
+
+{% schema %}
+{
+    "name": "Announcement Bar",
+    "settings": [
+        {
+            "type": "text",
+            "id": "announcement_text",
+            "label": "Announcement Text",
+            "default": "Welcome to our store! Enjoy free shipping on orders over $50."
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background",
+            "default": "#000"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#fff"
+        },
+        {
+            "type": "range",
+            "id": "font_size",
+            "min": 12,
+            "max": 24,
+            "step": 1,
+            "unit": "px",
+            "label": "Font size",
+            "default": 16
+        },
+        {
+            "type": "url",
+            "id": "announcement_link",
+            "label": "Add Link"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_announcement",
+            "label": "Show announcement",
+            "default": true
+        }
+    ],
+    "presets": [
+        {
+            "name": "Announcement Bar"
+        }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+   .announcement_text {
+    text-align: center;
+    padding: 12px 5PX;
+}
+ .announcement_bar_text p a{
+    text-decoration: none;
+    color:#fff;
+}
+{% endstylesheet %}
