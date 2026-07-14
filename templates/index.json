@@ -7,15 +7,38 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-
 {
   "sections": {
     "main": {
       "type": "hero",
       "settings": {}
+    },
+    "featured_collection_Jn3myg": {
+      "type": "featured-collection",
+      "name": "Featured Collection",
+      "settings": {}
+    },
+    "shop_by_category_GGDcFi": {
+      "type": "shop-by-category",
+      "name": "Shop By Category",
+      "settings": {}
+    },
+    "image_with_text_GgrKTF": {
+      "type": "image-with-text",
+      "name": "Image With Text",
+      "settings": {}
+    },
+    "promotional_banner_6AULVV": {
+      "type": "promotional-banner",
+      "name": "Promotional Banner",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "featured_collection_Jn3myg",
+    "shop_by_category_GGDcFi",
+    "image_with_text_GgrKTF",
+    "promotional_banner_6AULVV"
   ]
 }
