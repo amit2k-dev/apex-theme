@@ -1,0 +1,287 @@
+<section class="testimonials">
+  <div class="container">
+    <div class="testimonials__header">
+      <span class="testimonials__subtitle">
+        CUSTOMER REVIEWS
+      </span>
+      <h2 class="testimonials__title">
+        Loved By Thousands Of Customers
+      </h2>
+      <p class="testimonials__description">
+        See what our happy customers have to say about our premium quality products
+        and shopping experience.
+      </p>
+    </div>
+    <div class="testimonials__grid">
+      <!-- Testimonial Card -->
+      <article class="testimonial-card">
+        <div class="testimonial-card__rating">
+          ★★★★★
+        </div>
+        <p class="testimonial-card__text">
+          "The quality exceeded my expectations. The fabric feels premium, delivery
+          was fast, and the fit is absolutely perfect. Highly recommended!"
+        </p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__image">
+            <img src="{{ '9.png' | asset_url }}" alt="Customer">
+          </div>
+          <div class="testimonial-card__info">
+            <h3 class="testimonial-card__name">
+              Michael Anderson
+            </h3>
+            <span class="testimonial-card__designation">
+              Verified Customer
+            </span>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card">
+        <div class="testimonial-card__rating">
+          ★★★★★
+        </div>
+        <p class="testimonial-card__text">
+          "The quality exceeded my expectations. The fabric feels premium, delivery
+          was fast, and the fit is absolutely perfect. Highly recommended!"
+        </p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__image">
+            <img src="{{ '10.png' | asset_url }}" alt="Customer">
+          </div>
+          <div class="testimonial-card__info">
+            <h3 class="testimonial-card__name">
+              Michael Anderson
+            </h3>
+            <span class="testimonial-card__designation">
+              Verified Customer
+            </span>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card">
+        <div class="testimonial-card__rating">
+          ★★★★★
+        </div>
+        <p class="testimonial-card__text">
+          "The quality exceeded my expectations. The fabric feels premium, delivery
+          was fast, and the fit is absolutely perfect. Highly recommended!"
+        </p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__image">
+            <img src="{{ '11.png' | asset_url }}" alt="Customer">
+          </div>
+          <div class="testimonial-card__info">
+            <h3 class="testimonial-card__name">
+              Michael Anderson
+            </h3>
+            <span class="testimonial-card__designation">
+              Verified Customer
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.testimonials-section{
+    background: #fafafa;
+}
+.testimonials {
+  padding:120px 0;
+}
+.testimonials__header {
+  max-width:700px;
+  margin:0 auto 70px;
+  text-align:center;
+}
+.testimonials__subtitle {
+  display:inline-block;
+  margin-bottom:14px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#777;
+}
+.testimonials__title {
+  font-size:48px;
+  line-height:1.15;
+  margin-bottom:20px;
+}
+.testimonials__description {
+  font-size:18px;
+  color:#666;
+  line-height:1.7;
+}
+.testimonials__grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+.testimonial-card {
+  background:#fff;
+  padding:40px;
+  border-radius:18px;
+  transition:.35s ease;
+  box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+.testimonial-card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 20px 45px rgba(0,0,0,.10);
+}
+.testimonial-card__rating {
+  color:#ffb400;
+  font-size:18px;
+  margin-bottom:20px;
+}
+.testimonial-card__text {
+  color:#555;
+  line-height:1.8;
+  margin-bottom:35px;
+}
+.testimonial-card__author {
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.testimonial-card__image {
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  overflow:hidden;
+}
+.testimonial-card__image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.testimonial-card__name {
+  font-size:20px;
+  margin-bottom:6px;
+}
+.testimonial-card__designation {
+  color:#777;
+  font-size:14px;
+}
+
+
+/* -----------------------------
+   Card Polish
+------------------------------ */
+
+.testimonial-card {
+  border:1px solid rgba(0,0,0,.05);
+}
+.testimonial-card__image {
+  flex-shrink:0;
+}
+.testimonial-card__image img {
+  transition:.4s ease;
+}
+.testimonial-card:hover .testimonial-card__image img {
+  transform:scale(1.08);
+}
+.testimonial-card__name {
+  color:#111;
+}
+.testimonial-card__designation {
+  display:block;
+}
+/* -----------------------------
+   Tablet
+------------------------------ */
+
+@media screen and (max-width:991px) {
+  .testimonials {
+  padding:90px 0;
+}
+.testimonials__header {
+  margin-bottom:50px;
+}
+.testimonials__grid {
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+.testimonials__title {
+  font-size:40px;
+}
+.testimonials__description {
+  font-size:16px;
+}
+.testimonial-card {
+  padding:32px;
+}
+}/* -----------------------------
+   Mobile
+------------------------------ */
+
+@media screen and (max-width:767px) {
+  .testimonials {
+  padding:70px 0;
+}
+.testimonials__header {
+  margin-bottom:40px;
+}
+.testimonials__grid {
+  grid-template-columns:1fr;
+  gap:20px;
+}
+.testimonials__subtitle {
+  font-size:12px;
+  letter-spacing:2px;
+}
+.testimonials__title {
+  font-size:32px;
+}
+.testimonials__description {
+  font-size:15px;
+  line-height:1.6;
+}
+.testimonial-card {
+  padding:28px;
+  border-radius:16px;
+}
+.testimonial-card__text {
+  font-size:15px;
+  margin-bottom:28px;
+}
+.testimonial-card__image {
+  width:56px;
+  height:56px;
+}
+.testimonial-card__name {
+  font-size:18px;
+}
+}/* -----------------------------
+   Small Mobile
+------------------------------ */
+
+@media screen and (max-width:480px) {
+  .testimonials__title {
+  font-size:28px;
+}
+.testimonial-card {
+  padding:22px;
+}
+.testimonial-card__text {
+  font-size:14px;
+}
+}
+ {% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "tag": "section",
+  "class": "testimonials-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Testimonials"
+    }
+  ]
+}
+{% endschema %}
