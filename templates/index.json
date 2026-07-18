@@ -32,6 +32,16 @@
       "type": "promotional-banner",
       "name": "Promotional Banner",
       "settings": {}
+    },
+    "testimonials_qqHUG4": {
+      "type": "testimonials",
+      "name": "Testimonials",
+      "settings": {}
+    },
+    "logo_list_JYjxit": {
+      "type": "logo-list",
+      "name": "Logo List",
+      "settings": {}
     }
   },
   "order": [
@@ -39,6 +49,8 @@
     "featured_collection_Jn3myg",
     "shop_by_category_GGDcFi",
     "image_with_text_GgrKTF",
-    "promotional_banner_6AULVV"
+    "promotional_banner_6AULVV",
+    "testimonials_qqHUG4",
+    "logo_list_JYjxit"
   ]
 }
